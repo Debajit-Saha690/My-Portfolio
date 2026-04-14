@@ -36,7 +36,7 @@ portfolio/
 ---
 
 ## 📌 GitHub Repo
-👉 https://github.com/yourusername/My-Portfolio
+👉 https://github.com/Debajit_Saha690/My-Portfolio
 
 ---
 
