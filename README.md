@@ -41,8 +41,8 @@ portfolio/
 ---
 
 ## 📸 Screenshot
-![Portfolio(1)](Screenshots/Portfolio(1).png)
-![Portfolio(2)](Screenshots/Portfolio(2).png)
+<img width="1878" height="787" alt="Portfolio(1) png" src="https://github.com/user-attachments/assets/4c0d22d1-768f-4179-8797-8ed3f1f103b8" />
+<img width="1867" height="781" alt="Portfolio(2) png" src="https://github.com/user-attachments/assets/92c35c14-46f8-4d0a-b314-ff6421acdbd7" />
 
 ---
 
