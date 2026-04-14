@@ -41,8 +41,8 @@ portfolio/
 ---
 
 ## 📸 Screenshot
-![Portfolio Screenshot](Portfolio(1).png)
-![Portfolio Screenshot](Portfolio(2).png)
+![Portfolio(1)](Screenshots/Portfolio(1).png)
+![Portfolio(2)](Screenshots/Portfolio(2).png)
 
 ---
 
