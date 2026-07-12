@@ -1,57 +1,24 @@
-const texts = [
-    "B.Tech CSE Student",
-    "Software Developer",
-    "Flask Backend Developer",
-    "Problem Solver"
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-let index = 0;
-let charIndex = 0;
-let currentText = "";
+    const text = "B.Tech CSE Student | Software Developer | Problem Solver";
 
-function typeEffect(){
+    let i = 0;
 
-    if(charIndex < texts[index].length){
+    const typingElement = document.getElementById("typing");
 
-        document.getElementById("typing").innerHTML += 
-        texts[index].charAt(charIndex);
+    function typeEffect() {
 
-        charIndex++;
+        if (i < text.length) {
 
-        setTimeout(typeEffect,100);
+            typingElement.textContent += text.charAt(i);
+
+            i++;
+
+            setTimeout(typeEffect, 60);
+        }
 
     }
-    else{
 
-        setTimeout(eraseEffect,1500);
+    typeEffect();
 
-    }
-}
-
-
-function eraseEffect(){
-
-    if(charIndex > 0){
-
-        document.getElementById("typing").innerHTML =
-        texts[index].substring(0,charIndex-1);
-
-        charIndex--;
-
-        setTimeout(eraseEffect,50);
-
-    }
-    else{
-
-        index++;
-
-        if(index >= texts.length)
-            index=0;
-
-        setTimeout(typeEffect,500);
-    }
-
-}
-
-
-typeEffect();
+});
