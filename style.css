@@ -1,45 +1,72 @@
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navbar */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+
+    padding: 20px 40px;
+
     background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav h2 {
+    color: #38bdf8;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 25px;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
+
 .hero {
+    max-width: 900px;
+    margin: auto;
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 .profile {
@@ -48,11 +75,23 @@ nav a:hover {
     border-radius: 50%;
     object-fit: cover;
     object-position: center 30%;
-    border: 3px solid #38bdf8;
+    border: 4px solid #38bdf8;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.hero p {
+    margin-bottom: 12px;
 }
 
 #typing {
@@ -60,109 +99,228 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Button */
+/* =========================
+   BUTTONS
+========================= */
+
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
+    margin: 10px;
+    padding: 12px 22px;
+
     background: #38bdf8;
     color: black;
-    border-radius: 5px;
+
+    border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: bold;
+
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-    transform: scale(1.1);
     background: #0ea5e9;
+    transform: translateY(-2px);
 }
 
-/* Card */
+/* =========================
+   CARDS
+========================= */
+
 .card {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+
     background: #1e293b;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
+
+    border-radius: 12px;
+
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.20);
 }
 
-/* Skills */
+.card h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-category {
+    margin-bottom: 25px;
+}
+
+.skills-category h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
 .skills span {
+
     display: inline-block;
+
     background: #334155;
-    padding: 8px 12px;
+
+    padding: 8px 15px;
+
     margin: 5px;
-    border-radius: 5px;
+
+    border-radius: 6px;
+
     transition: 0.3s;
 }
 
 .skills span:hover {
     background: #38bdf8;
     color: black;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Project */
+/* =========================
+   PROJECTS
+========================= */
+
 .project {
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 25px;
+    padding: 20px;
+
     background: #334155;
-    border-radius: 8px;
+
+    border-radius: 10px;
+
     transition: 0.3s;
-}
-
-/* Bullet list inside project */
-.project ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.project ul li {
-    margin-bottom: 6px;
-    line-height: 1.4;
 }
 
 .project:hover {
     transform: translateY(-5px);
 }
 
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
+.project h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
 }
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.project li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+hr {
+    border: none;
+    border-top: 1px solid #475569;
+    margin: 30px 0;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact p {
+    margin-bottom: 15px;
+}
+
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    text-align: center;
+
+    color: #94a3b8;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
     nav {
         flex-direction: column;
-        align-items: center;
+        padding: 20px;
     }
 
     nav ul {
-        margin-top: 15px;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        margin-top: 15px;
+        text-align: center;
     }
 
-    nav ul li {
-        margin-left: 0;
+    .hero {
+        padding: 50px 20px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 32px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
     }
 
     .profile {
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
     }
 
     .card {
-        margin: 10px;
+        margin: 15px;
+        padding: 20px;
     }
+
+    .btn {
+        display: block;
+        width: 220px;
+        margin: 12px auto;
+        text-align: center;
+    }
+
+    .skills span {
+        margin: 6px;
+    }
+
 }
