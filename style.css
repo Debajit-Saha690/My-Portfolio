@@ -135,3 +135,34 @@ nav a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .profile {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
