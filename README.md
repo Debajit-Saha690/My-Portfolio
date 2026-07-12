@@ -35,11 +35,6 @@ portfolio/
 
 ---
 
-## 📌 GitHub Repo
-👉 https://github.com/Debajit_Saha690/My-Portfolio
-
----
-
 ## 🎯 Purpose
 This project is built to strengthen my frontend development skills and showcase my portfolio for placement opportunities.
 
