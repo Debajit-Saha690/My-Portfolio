@@ -1,326 +1,576 @@
-/* =========================
-   GLOBAL
-========================= */
+/* ================= THEME VARIABLES ================= */
+
+:root {
+
+    --background: #0f172a;
+    --text: #ffffff;
+
+    --card: #1e293b;
+    --project: #334155;
+
+    --nav: #020617;
+
+    --primary: #38bdf8;
+    --primary-hover: #0ea5e9;
+
+    --border: #334155;
+
+}
+
+
+.light-mode {
+
+    --background: #f8fafc;
+    --text: #1e293b;
+
+    --card: #ffffff;
+    --project: #e2e8f0;
+
+    --nav: #ffffff;
+
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+
+    --border: #cbd5e1;
+
+}
+
+
+/* ================= GLOBAL ================= */
 
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: #ffffff;
+
+    background: var(--background);
+
+    color: var(--text);
+
     line-height: 1.6;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+
 }
 
-/* =========================
-   NAVBAR
-========================= */
+
+/* ================= NAVBAR ================= */
+
 
 nav {
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
 
     padding: 20px 40px;
 
-    background: #020617;
-    border-bottom: 1px solid #1e293b;
+
+    background: var(--nav);
+
+    border-bottom: 1px solid var(--border);
+
+
+    transition: 0.3s;
+
 }
+
 
 nav h2 {
-    color: #38bdf8;
+
+    color: var(--primary);
+
 }
+
+
 
 nav ul {
+
     display: flex;
+
     list-style: none;
+
     gap: 25px;
+
 }
+
 
 nav a {
+
     text-decoration: none;
-    color: white;
+
+    color: var(--text);
+
     transition: 0.3s;
+
 }
+
 
 nav a:hover {
-    color: #38bdf8;
+
+    color: var(--primary);
+
 }
 
-/* =========================
-   HERO
-========================= */
+
+
+/* Theme Button */
+
+.theme-btn {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================= HERO ================= */
+
 
 .hero {
+
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
+
     padding: 70px 20px;
+
 }
+
+
 
 .profile {
+
     width: 180px;
+
     height: 180px;
+
+
     border-radius: 50%;
+
+
     object-fit: cover;
+
     object-position: center 30%;
-    border: 4px solid #38bdf8;
+
+
+    border: 4px solid var(--primary);
+
+
     margin-bottom: 20px;
+
 }
+
+
 
 .hero h1 {
+
     font-size: 42px;
+
     margin-bottom: 10px;
+
 }
+
+
 
 .hero h3 {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     margin-bottom: 15px;
+
     font-weight: normal;
+
 }
+
+
 
 .hero p {
+
     margin-bottom: 12px;
+
 }
+
+
 
 #typing {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     font-weight: bold;
+
 }
 
-/* =========================
-   BUTTONS
-========================= */
+
+
+/* ================= BUTTONS ================= */
+
 
 .btn {
+
     display: inline-block;
+
     margin: 10px;
+
     padding: 12px 22px;
 
-    background: #38bdf8;
-    color: black;
+
+    background: var(--primary);
+
+    color: #000;
+
 
     border-radius: 8px;
+
     text-decoration: none;
+
     font-weight: bold;
 
+
     transition: 0.3s ease;
+
 }
+
+
 
 .btn:hover {
-    background: #0ea5e9;
+
+    background: var(--primary-hover);
+
     transform: translateY(-2px);
+
 }
 
-/* =========================
-   CARDS
-========================= */
+
+
+/* ================= CARDS ================= */
+
 
 .card {
+
     max-width: 1000px;
+
     margin: 30px auto;
+
     padding: 30px;
 
-    background: #1e293b;
+
+    background: var(--card);
+
 
     border-radius: 12px;
 
+
     transition: 0.3s;
+
 }
+
+
 
 .card:hover {
+
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.20);
+
+    box-shadow: 0 12px 25px rgba(56,189,248,0.20);
+
 }
+
+
 
 .card h2 {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .card p {
+
     line-height: 1.8;
+
 }
 
-/* =========================
-   SKILLS
-========================= */
+
+
+/* ================= SKILLS ================= */
+
 
 .skills-category {
+
     margin-bottom: 25px;
+
 }
 
+
+
 .skills-category h3 {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     margin-bottom: 10px;
+
 }
+
+
 
 .skills span {
 
+
     display: inline-block;
 
-    background: #334155;
+
+    background: var(--project);
+
 
     padding: 8px 15px;
 
+
     margin: 5px;
+
 
     border-radius: 6px;
 
+
     transition: 0.3s;
+
 }
+
+
 
 .skills span:hover {
-    background: #38bdf8;
+
+    background: var(--primary);
+
     color: black;
+
     transform: scale(1.05);
+
 }
 
-/* =========================
-   PROJECTS
-========================= */
+
+
+/* ================= PROJECTS ================= */
+
 
 .project {
+
     margin-top: 25px;
+
     padding: 20px;
 
-    background: #334155;
+
+    background: var(--project);
+
 
     border-radius: 10px;
 
+
     transition: 0.3s;
+
 }
+
+
 
 .project:hover {
+
     transform: translateY(-5px);
+
 }
+
+
 
 .project h3 {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     margin-bottom: 10px;
+
 }
+
+
 
 .project p {
+
     margin-bottom: 10px;
+
 }
+
+
 
 .project ul {
+
     margin-top: 10px;
+
     margin-left: 20px;
+
 }
+
+
 
 .project li {
+
     margin-bottom: 8px;
+
 }
 
-/* =========================
-   HORIZONTAL LINE
-========================= */
+
+
+/* ================= HORIZONTAL LINE ================= */
+
 
 hr {
+
     border: none;
-    border-top: 1px solid #475569;
+
+    border-top: 1px solid var(--border);
+
     margin: 30px 0;
+
 }
 
-/* =========================
-   CONTACT
-========================= */
+
+
+/* ================= CONTACT ================= */
+
 
 #contact p {
+
     margin-bottom: 15px;
+
 }
+
+
 
 #contact a {
-    color: #38bdf8;
+
+    color: var(--primary);
+
     text-decoration: none;
+
 }
+
+
 
 #contact a:hover {
+
     text-decoration: underline;
+
 }
 
-/* =========================
-   FOOTER
-========================= */
 
-footer {
 
-    margin-top: 50px;
+/* ================= MOBILE ================= */
 
-    padding: 25px;
 
-    background: #020617;
+@media(max-width:768px) {
 
-    text-align: center;
-
-    color: #94a3b8;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
 
     nav {
+
         flex-direction: column;
+
         padding: 20px;
+
     }
+
+
 
     nav ul {
+
         flex-direction: column;
+
         gap: 12px;
+
         margin-top: 15px;
+
         text-align: center;
+
     }
+
+
 
     .hero {
+
         padding: 50px 20px;
+
     }
+
+
 
     .hero h1 {
+
         font-size: 32px;
+
     }
+
+
 
     .hero h3 {
+
         font-size: 20px;
+
     }
+
+
 
     .profile {
-        width: 150px;
-        height: 150px;
+
+        width:150px;
+
+        height:150px;
+
     }
 
+
+
     .card {
-        margin: 15px;
-        padding: 20px;
+        margin:15px;
+        padding:20px;
     }
 
     .btn {
-        display: block;
-        width: 220px;
-        margin: 12px auto;
-        text-align: center;
+        display:block;
+        width:220px;
+        margin:12px auto;
+        text-align:center;
     }
 
-    .skills span {
-        margin: 6px;
-    }
 
 }
